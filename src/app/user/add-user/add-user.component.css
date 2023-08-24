@@ -1,0 +1,26 @@
+input {
+    transition: width 0.4s ease-in-out;
+}
+  
+input:focus {
+    width: 20%;
+    color: blue;
+}
+
+.container{
+    background-color: beige;
+    padding: 10px;
+    border-radius: 20%;
+}
+
+.title {
+    color: yellow;
+    font-weight:bolder;
+}
+.title:hover{
+    color: white;
+}
+
+button:hover{
+    color: yellow;
+}

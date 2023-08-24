@@ -1,0 +1,54 @@
+.title {
+    color: yellow;
+    font-weight:bolder;
+}   
+
+table {
+    width: 70%;
+    border: 2px solid;
+    padding-top: 20px;
+    position: relative;
+    
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+th {
+    height: 70px;
+    border: 1px solid;
+    padding: 15px;
+    text-align: center;
+    background-color: #04AA6D;
+    color: white;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid;
+}
+tr{
+    padding: 15px;
+    text-align: center;
+    border: 1px solid;
+    background-color: rgb(99, 235, 217);
+}
+tr:hover {
+    background-color: coral;
+}
+
+span {
+    display:inline-box; 
+    margin: 0px 5px;   
+}
+.icon{
+    color: rgba(13,110,253,255);
+    font-size:24px;
+}
+.icon:hover{
+    color: darkblue;
+    cursor:pointer;
+}

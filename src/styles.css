@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+body{
+    font-family: 'Fredoka', sans-serif;
+    background-image: url("C:\Users\ankus\OneDrive\Desktop\Swabhav Training\2516482.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 120% 140%;
+    position: relative;
+}
