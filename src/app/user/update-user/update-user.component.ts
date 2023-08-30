@@ -11,6 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UpdateUserComponent implements OnInit {
   userIDtoUpdate :any;
+  user: any;
+  showPassword: boolean = false;
   constructor(
     private route: ActivatedRoute,
     private userData: UserService,
@@ -20,11 +22,27 @@ export class UpdateUserComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.userIDtoUpdate = params.get('id');
       console.log('Received ID:', this.userIDtoUpdate);
+      this.userData.viewUser(this.userIDtoUpdate).subscribe((data) => {
+        this.user = data;
+        this.updateUser.patchValue({
+          fullname: this.user.FullName,
+          username: this.user.Username,
+          // lastname : this.user.lastname,
+          // firstname : this.user.firstname,
+          password: this.user.Password, // You can set a default password value here if needed
+        });
+      });
     });
+  }
+  
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
   }
   
   updateUser = new FormGroup({
     fullname : new FormControl(''),
+    // firstname : new FormControl(''),
+    // lastname : new FormControl(''),
     username : new FormControl(''),
     password : new FormControl('')
   })

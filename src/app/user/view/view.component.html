@@ -1,0 +1,44 @@
+<h3 class="title text-center mt-3">Viewing USER ID : {{userID}}</h3><br>
+<div *ngIf="user">
+    <table id="User" class="center" cellspacing="1">
+        <tr>
+            <th>ID</th>
+            <td>{{user.ID}}</td>
+        <tr>
+            <th>Full Name</th>
+            <td>{{user.FullName}}</td>
+
+        </tr>
+        <!-- <tr>
+            <th>First Name</th>
+            <td>{{user.firstname}}</td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td>{{user.lastname}}</td>
+        </tr> -->
+        <tr>
+            <th>Username</th>
+            <td>{{user.Username}}</td>
+        </tr>
+        <tr>
+            <th>Operations</th>
+            <td >
+                <span><i class="icon fas fa-edit" (click)="onUpdateClick(user.ID)"></i></span>&nbsp;
+                <span><i class="icon fa fa-trash"  (click)="onDeleteClick(user)"></i></span>
+            </td>
+        </tr>
+    </table>
+    <br><br><br>
+    <p class="text-center">
+        <a class="btn btn-success btn-sm" routerLink="/user/{{user.ID}}/contact/register">
+            <i class="fa fa-plus-circle">&nbsp;</i>
+            Create Contact
+        </a>&nbsp;&nbsp;
+        <a class="btn btn-success btn-sm" routerLink="/user/{{user.ID}}/contact/viewAll">
+            <!-- <i class="fa fa-plus-circle">&nbsp;</i> -->
+            View All Contacts
+        </a>&nbsp;&nbsp;
+    </p>
+</div>
+

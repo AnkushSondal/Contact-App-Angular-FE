@@ -1,0 +1,37 @@
+<h3 class="title text-center mt-5">Viewing Contact Info ID : {{ciID}}</h3><br>
+<div *ngIf="contact">
+    <table id="User" class="center" cellspacing="1">
+        <tr>
+            <th>ID</th>
+            <td>{{contact.ID}}</td>
+        <tr>
+            <th>Type</th>
+            <td>{{contact.CIType}}</td>
+
+        </tr>
+        <tr>
+            <th>Value</th>
+            <td>{{contact.CIValue}}</td>
+        </tr>
+        <tr>
+            <th>Contact Refer</th>
+            <td>{{contact.ContactRefer}}</td>
+        </tr>
+        <tr>
+            <th>Operations</th>
+            <td >
+                <span><i class="icon fas fa-edit" (click)="onUpdateClick(contact.ID)"></i></span>&nbsp;
+                <span><i class="icon fa fa-trash"  (click)="onDeleteClick(contact.ID)"></i></span>
+            </td>
+        </tr>
+    </table>
+    <br><br><br>
+    <p class="text-center">
+        <a class="btn btn-success btn-sm" routerLink="/user/{{userID}}/contact/{{contactID}}/contactinfo/viewAll">
+            <i class="fa fa-angle-double-left">&nbsp;</i>
+            Back
+        </a>
+    </p>
+</div>
+
+

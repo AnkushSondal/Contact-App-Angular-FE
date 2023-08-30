@@ -51,9 +51,5 @@ span {
 .icon:hover{
     color: darkblue;
     cursor:pointer;
-}
-
-label{
-    color:white;
-    font-size: large;
+    
 }

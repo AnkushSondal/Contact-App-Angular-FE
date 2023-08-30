@@ -1,0 +1,36 @@
+<h3 class="title text-center mt-3">All Contacts Infos for Contact ID : {{userID}} </h3><br>
+<div class="text-center">
+    <label>Search Contact Info</label>
+    <input [(ngModel)]="term" placeholder="Search by ID, Type, Value"><br><br>
+    <table id="User" class="center" cellspacing="1">
+        <tr>
+            <th>ID</th>
+            <th>type</th>
+            <th>Operations</th>
+        </tr>
+        <tr *ngFor="let contactinfo of contactInfoData | filter:term">
+            <td>{{contactinfo.ID}}</td>
+            <td>{{contactinfo.CIType}}</td>
+            <td>
+                <!-- <span><a href="/user/view" class="btn btn-dark btn-sm">View</a></span> -->
+                <!-- <span><a href="/user/update" class="btn btn-dark btn-sm">Update</a></span> -->
+                <!-- <span><a href="/user/delete" class="btn btn-dark btn-sm">Delete</a></span> -->
+
+                <span><i class="icon fa fa-eye" (click)="onViewClick(contactinfo.ID)"></i></span>&nbsp;
+                <span><i class="icon fas fa-edit" (click)="onUpdateClick(contactinfo.ID)"></i></span>&nbsp;
+                <span><i class="icon fa fa-trash"  (click)="onDeleteClick(contactinfo.ID)"></i></span>
+            </td>
+        </tr>
+    </table>
+    <br><br><br>
+    <p class="text-center">
+        <a class="btn btn-success btn-sm" routerLink="/user/{{userID}}/contact/{{contactID}}/contactinfo/register">
+            <i class="fa fa-plus-circle">&nbsp;</i>
+            Add Contact Info
+        </a>&nbsp;&nbsp;
+        <a class="btn btn-success btn-sm" routerLink="/user/{{userID}}/contact/view/{{contactID}}">
+            <i class="fa fa-angle-double-left">&nbsp;</i>
+            Back
+        </a>
+    </p>
+</div>

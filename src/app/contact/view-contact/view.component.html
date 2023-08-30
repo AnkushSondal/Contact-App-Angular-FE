@@ -1,0 +1,44 @@
+<h3 class="title text-center mt-5">Viewing USER ID : {{userID}}</h3><br>
+<div *ngIf="contact">
+    <table id="User" class="center" cellspacing="1">
+        <tr>
+            <th>ID</th>
+            <td>{{contact.ID}}</td>
+        <tr>
+            <th>Contact Name</th>
+            <td>{{contact.ContactName}}</td>
+
+        </tr>
+        <tr>
+            <th>User refer</th>
+            <td>{{contact.UserRefer}}</td>
+        </tr>
+        <!-- <tr>
+            <th>Last Name</th>
+            <td>{{user.lastname}}</td>
+        </tr> -->
+        <tr>
+            <th>Operations</th>
+            <td >
+                <span><i class="icon fas fa-edit" (click)="onUpdateClick(contact.ID)"></i></span>&nbsp;
+                <span><i class="icon fa fa-trash"  (click)="onDeleteClick(contact)"></i></span>
+            </td>
+        </tr>
+    </table>
+    <br><br><br>
+    <p class="text-center">
+        <a class="btn btn-success btn-sm" routerLink="/user/{{userID}}/contact/{{contact.ID}}/contactinfo/register">
+            <i class="fa fa-plus-circle">&nbsp;</i>
+            Create Contact Info
+        </a>&nbsp;&nbsp;
+        <a class="btn btn-success btn-sm" routerLink="/user/{{userID}}/contact/{{contact.ID}}/contactinfo/viewAll">
+            <i class="fa fa-plus-circle">&nbsp;</i>
+            View Contact Infos
+        </a>&nbsp;&nbsp;
+        <a class="btn btn-success btn-sm" routerLink="/user/{{userID}}/contact/viewAll">
+            <i class="fa fa-angle-double-left">&nbsp;</i>
+            Back
+        </a>
+    </p>
+</div>
+

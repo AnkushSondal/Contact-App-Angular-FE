@@ -1,32 +1,38 @@
+<!-- <a class="btn btn-success btn-sm" routerLink="/">
+    <i class="fa fa-angle-double-left">&nbsp;</i>
+    Back
+</a> -->
 <h3 class="title text-center mt-3">All Registered Users</h3><br>
-<div>
+<div class="text-center">
+    <label>Search User&nbsp;</label>
+    <input [(ngModel)]="term" placeholder="Search by ID, Username, Fullname"/><br><br>
     <table id="User" class="center" cellspacing="1">
         <tr>
             <th>ID</th>
-            <th>Full Name</th>
             <th>Username</th>
+            <th>FullName</th>
             <th>Operations</th>
         </tr>
-        <tr *ngFor="let user of userData">
+        <tr *ngFor="let user of userData | filter: term">
             <td>{{user.ID}}</td>
-            <td>{{user.FullName}}</td>
             <td>{{user.Username}}</td>
-            <td >
-                <!-- <span><a href="/user/view" class="btn btn-dark btn-sm">View</a></span> -->
-                <!-- <span><a href="/user/update" class="btn btn-dark btn-sm">Update</a></span> -->
-                <!-- <span><a href="/user/delete" class="btn btn-dark btn-sm">Delete</a></span> -->
-
-                <span><i class="icon fa fa-eye"></i></span>&nbsp;
+            <td>{{user.FullName}}</td>
+            <td>
+                <!-- <span><i class="icon fa fa-eye" (click)="onViewClick(user.ID)"></i></span>&nbsp; -->
                 <span><i class="icon fas fa-edit" (click)="onUpdateClick(user.ID)"></i></span>&nbsp;
-                <span><i class="icon fa fa-trash"  (click)="onDeleteClick(user)"></i></span>
+                <span><i class="icon fa fa-trash"  (click)="onDeleteClick(user.ID)"></i></span>
             </td>
         </tr>
     </table>
     <br><br><br>
-    <p class="text-center">
+    <!-- <p class="text-center">
         <a class="btn btn-success btn-sm" href="/user/register">
             <i class="fa fa-plus-circle">&nbsp;</i>
             Create User
+        </a>&nbsp;&nbsp;
+        <a class="btn btn-success btn-sm" routerLink="/">
+            <i class="fa fa-angle-double-left">&nbsp;</i>
+            Back
         </a>
-    </p>
+    </p> -->
 </div>

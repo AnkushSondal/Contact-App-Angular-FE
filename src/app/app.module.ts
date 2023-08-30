@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ContactModule } from './contact/contact.module';
+import { ContactinfoModule } from './contactinfo/contactinfo.module';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,16 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BrowserModule,
     AppRoutingModule,
     UserModule,
-    HttpClientModule
+    ContactModule,
+    ContactinfoModule,
+    HttpClientModule,
+    LoginModule,
   ],
   exports: [
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

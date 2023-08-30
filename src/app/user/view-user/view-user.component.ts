@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ViewUserComponent {
   userData: any;
+  term :any;
   constructor(
     private router: Router,
     private usersData : UserService, 
@@ -21,10 +22,15 @@ export class ViewUserComponent {
     this.router.navigate(['user/update', userID]);
   }
 
-  onDeleteClick(user : any){
-    console.log('deleted user :', user.FullName);
-    this.usersData.deleteUser(user.ID).subscribe();
-    alert("user : "+user.FullName+" deleted successfully")
+  onDeleteClick(userID : string){
+    console.log('deleted user :', userID);
+    this.usersData.deleteUser(userID).subscribe();
+    alert("user : "+userID+" deleted successfully")
     this.router.navigate(['home']);
   }
+
+  // onViewClick(userID: string){
+  //   console.log("from view, id: ", userID);
+  //   this.router.navigate(['user/view', userID]);
+  // }
 }

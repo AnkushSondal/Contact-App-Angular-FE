@@ -6,14 +6,30 @@
     <div class="h-100 py-5 px-5">
       <form [formGroup]="addUser" (ngSubmit)="getUserFormData()">
         <label for="fname">Full Name &nbsp;&nbsp;</label>
-        <input
+        <input class="ip"
           type="text"
           formControlName="fullname"
           placeholder="Your full name.."
           name="fname"
         /><br /><br />
+
+        <!-- <label for="firstname">First Name &nbsp;&nbsp;</label>
+        <input class="ip"
+          type="text"
+          formControlName="firstname"
+          placeholder="Your first name.."
+          name="firstname"
+        /><br /><br />
+        <label for="lastname">last Name &nbsp;&nbsp;</label>
+        <input class="ip"
+          type="text"
+          formControlName="lastname"
+          placeholder="Your last name.."
+          name="lastname"
+        /><br /><br /> -->
+
         <label for="username">Username &nbsp;&nbsp;</label>
-        <input
+        <input class="ip"
           type="text"
           formControlName="username"
           placeholder="Your username.."
@@ -21,12 +37,40 @@
         /><br /><br />
         <label for="password">Password &nbsp;&nbsp;</label>
         <input
+          type="{{ showPassword ? 'text' : 'password' }}"
+          id="password"
+          placeholder="Your password.."
+          formControlName="password"
+        />&nbsp;
+        <span class="password-toggle" (click)="togglePasswordVisibility()">
+          <i class="fa {{ showPassword ? 'fa-eye-slash' : 'fa-eye' }}"></i>
+        </span><br><br>
+
+        <!-- <input class="ip"
+          type="password"
+          id="password"
+          formControlName="password"
+          [type]="showPassword ? 'text' : 'password'"
+        /><br>
+        <input
+          type="checkbox"
+          id="togglePassword"
+          (change)="togglePasswordVisibility()"
+        />
+        <label for="togglePassword">Show Password</label><br /><br /> -->
+        <!-- <input class="ip"
           type="password"
           formControlName="password"
           placeholder="Your password.."
           name="password"
-        /><br /><br />
-        <button class="btn btn-success btn-sm" (click)="onSubmit()">Submit</button>
+        /><br /><br /> -->
+
+        <button class="btn btn-success btn-sm" (click)="onSubmit()">Submit</button>&nbsp;
+        <input type="reset" class="reset btn btn-success btn-sm" value="Reset">&nbsp;
+        <a class="btn btn-success btn-sm" routerLink="/">
+          <i class="fa fa-angle-double-left">&nbsp;</i>
+          Back
+        </a>
       </form>
     </div>
   </div>

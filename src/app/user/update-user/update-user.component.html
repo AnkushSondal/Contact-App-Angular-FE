@@ -8,24 +8,50 @@
           <input
             type="text"
             formControlName="fullname"
-            placeholder="Your full name.."
+            placeholder="{{user.FullName}}"
             name="fname"
           /><br /><br />
+
+          <!-- <label for="fname">First Name &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            formControlName="firstname"
+            name="fname"
+          /><br /><br />
+          <label for="fname">Last Name &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            formControlName="lastname"
+            name="fname"
+          /><br /><br /> -->
+
           <label for="username">Username &nbsp;&nbsp;</label>
           <input
             type="text"
             formControlName="username"
-            placeholder="Your username.."
             name="username"
           /><br /><br />
           <label for="password">Password &nbsp;&nbsp;</label>
           <input
+            type="{{ showPassword ? 'text' : 'password' }}"
+            id="password"
+            placeholder="Your password.."
+            formControlName="password"
+          />&nbsp;
+          <span class="password-toggle" (click)="togglePasswordVisibility()">
+            <i class="fa {{ showPassword ? 'fa-eye-slash' : 'fa-eye' }}"></i>
+          </span><br><br>
+          <!-- <input
             type="password"
             formControlName="password"
-            placeholder="Your password.."
+            placeholder="{{user.Password}}"
             name="password"
-          /><br /><br />
-          <button class="btn btn-success btn-sm" (click)="onSubmit()">Update</button>
+          /><br /><br /> -->
+          <button class="btn btn-success btn-sm" (click)="onSubmit()">Update</button>&nbsp;
+          <a class="btn btn-success btn-sm" routerLink="/">
+            <i class="fa fa-angle-double-left">&nbsp;</i>
+            Back
+          </a>
         </form>
       </div>
     </div>
