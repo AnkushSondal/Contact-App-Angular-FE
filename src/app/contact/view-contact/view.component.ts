@@ -36,6 +36,6 @@ export class ViewContactComponent {
     console.log('deleted user :', user.FullName);
     this.contactService.deleteContact(this.userID,this.contactID).subscribe();
     alert("user : "+user.FullName+" deleted successfully")
-    this.router.navigate(['home']);
+    this.router.navigate(['user/'+this.userID+'/contact/viewAll']);
   }
 }

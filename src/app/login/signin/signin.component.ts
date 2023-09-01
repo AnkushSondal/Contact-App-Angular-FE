@@ -35,7 +35,13 @@ export class SigninComponent {
         if (response.token) {
           this.authService.setToken(response.token);
           const userId = response.id;
-          this.router.navigate(['user/view', userId]);
+          console.log(response);
+          
+          if (response.isadmin=='1') {
+            this.router.navigate(['admin']);
+          } else{
+            this.router.navigate(['user/view', userId]);
+          }
         } else {
           alert("INVALID Login Details ")
         }

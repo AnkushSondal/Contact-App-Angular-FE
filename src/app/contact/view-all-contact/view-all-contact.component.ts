@@ -21,12 +21,14 @@ export class ViewAllContactComponent {
       
   }
   ngOnInit() {
+    
     this.route.paramMap.subscribe(params => {
       this.userID = params.get('userid');
     });
     console.log("view contact for user: ",this.userID);
     // this.contactservice.viewContacts(this.userID).subscribe((data) => this.contactData = data);
     this.viewContacts()
+    
     // console.log(this.contactData);
   }
 
@@ -44,7 +46,8 @@ export class ViewAllContactComponent {
     console.log('deleted contact :', contactID);
     this.contactservice.deleteContact(this.userID,contactID).subscribe();
     alert("contact : "+contactID+" deleted successfully")
-    this.router.navigate(['home']);
+    location.reload();
+    this.router.navigate(['user/'+this.userID+'/contact/viewAll']);
   }
   onViewClick(contactID: string){
     console.log("from view, cid: ", contactID);

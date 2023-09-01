@@ -34,7 +34,7 @@ export class ViewComponent {
     console.log('deleted user :', user.FullName);
     this.usersData.deleteUser(user.ID).subscribe();
     alert("user : "+user.FullName+" deleted successfully")
-    this.router.navigate(['home']);
+    this.router.navigate(['/']);
   }
 
 

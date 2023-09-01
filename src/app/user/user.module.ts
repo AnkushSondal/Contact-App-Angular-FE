@@ -7,6 +7,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../app-routing.module';
 import { ViewComponent } from './view/view.component';
 import { SharedModule } from '../shared/shared.module';
+import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 
 
 
@@ -16,6 +17,7 @@ import { SharedModule } from '../shared/shared.module';
     UpdateUserComponent,
     ViewUserComponent,
     ViewComponent,
+    UserNavbarComponent,
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { SharedModule } from '../shared/shared.module';
     AddUserComponent,
     UpdateUserComponent,
     ViewUserComponent,
-    ViewComponent
+    ViewComponent,
+    UserNavbarComponent,
   ]
 })
 export class UserModule { }

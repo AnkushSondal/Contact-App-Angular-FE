@@ -7,6 +7,7 @@ import { ViewContactComponent } from './view-contact/view.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { UpdateContactComponent } from './update-contact/update-contact.component';
 import { SharedModule } from '../shared/shared.module';
+import { ContactNavbarComponent } from './contact-navbar/contact-navbar.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { SharedModule } from '../shared/shared.module';
     ViewAllContactComponent,
     ViewContactComponent,
     UpdateContactComponent,
+    ContactNavbarComponent,
   ],
   imports: [
     CommonModule,

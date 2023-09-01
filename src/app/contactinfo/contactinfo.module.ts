@@ -7,6 +7,7 @@ import { UpdateContactinfoComponent } from './update-contactinfo/update-contacti
 import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { CiNavbarComponent } from './ci-navbar/ci-navbar.component';
 
 
 
@@ -15,7 +16,8 @@ import { SharedModule } from '../shared/shared.module';
     AddContactinfoComponent,
     ViewAllContactinfoComponent,
     ViewContactinfoComponent,
-    UpdateContactinfoComponent
+    UpdateContactinfoComponent,
+    CiNavbarComponent
   ],
   imports: [
     CommonModule,

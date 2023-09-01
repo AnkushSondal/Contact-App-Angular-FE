@@ -27,6 +27,7 @@ export class UpdateUserComponent implements OnInit {
         this.updateUser.patchValue({
           fullname: this.user.FullName,
           username: this.user.Username,
+          // isadmin : this.user.isadmin,
           // lastname : this.user.lastname,
           // firstname : this.user.firstname,
           password: this.user.Password, // You can set a default password value here if needed
@@ -44,7 +45,8 @@ export class UpdateUserComponent implements OnInit {
     // firstname : new FormControl(''),
     // lastname : new FormControl(''),
     username : new FormControl(''),
-    password : new FormControl('')
+    password : new FormControl(''),
+    isadmin : new FormControl()
   })
 
   getUserFormData() {

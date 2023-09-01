@@ -17,12 +17,12 @@ import { UpdateContactinfoComponent } from './contactinfo/update-contactinfo/upd
 import { SigninComponent } from './login/signin/signin.component';
 
 const routes: Routes = [
-  { path:'', component:SigninComponent},
+  { path:'', redirectTo:'login', pathMatch:'full'},
   { path:'login', component:SigninComponent},
 
-  { path:'home',component:HomeComponent },
+  { path:'admin',component:HomeComponent },
   
-  { path:'admin',component:ViewUserComponent },
+  { path:'admin/viewAll',component:ViewUserComponent },
   { path:'user/register',component:AddUserComponent },
   { path:'user/update/:id',component:UpdateUserComponent },
   { path:'user/view/:id', component:ViewComponent},

@@ -39,6 +39,7 @@ export class ViewContactinfoComponent {
     console.log('deleted contact info :', ciID);
     this.contactService.deleteContact(this.contactID,ciID).subscribe();
     alert("contact : "+ciID+" deleted successfully")
-    this.router.navigate(['home']);
+    // location.reload();
+    this.router.navigate(['user/'+this.userID+'/contact/'+this.contactID+'/contactinfo/viewAll']);
   }
 }

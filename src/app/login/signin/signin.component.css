@@ -3,24 +3,39 @@
 }
   
 .ip:focus {
-    width: 20%;
+    /* width: 20%; */
     color: blue;
 }
 
 .container{
-    background-color: beige;
-    padding: 10px;
-    border-radius: 20%;
+    background-color: blue;
+    border-radius: 20px 80px;
+    padding-bottom: 100px;
+    padding-top: 50px;
 }
 
 .title {
-    color: yellow;
+    color: white;
     font-weight:bolder;
 }
-.title:hover{
-    color: white;
-}
+/* .title:hover{
+    color: black;
+} */
 
 button:hover, .reset:hover{
     color: yellow;
+}
+
+a {
+    text-decoration: none;
+  }
+.login-page {
+width: 100%;
+height: 100vh;
+display: inline-block;
+display: flex;
+align-items: center;
+}
+.form-right i {
+font-size: 100px;
 }

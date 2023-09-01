@@ -18,7 +18,6 @@ export class AddContactinfoComponent {
   userID:any;
   
   addContactInfo = new FormGroup({
-    contactrefer : new FormControl(''),
     CIType : new FormControl(''),
     CIValue : new FormControl(''),
   })
@@ -28,10 +27,6 @@ export class AddContactinfoComponent {
     this.route.paramMap.subscribe(params => {
       this.userID = params.get('userid')
       this.contactID = params.get('contactid');
-    });
-
-    this.addContactInfo.patchValue({
-      contactrefer : this.contactID // You can set a default password value here if needed
     });
   }
   getUserFormData() {

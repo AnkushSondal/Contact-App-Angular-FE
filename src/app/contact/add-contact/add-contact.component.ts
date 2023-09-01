@@ -17,7 +17,7 @@ export class AddContactComponent {
   userID: any;
   
   addContact = new FormGroup({
-    userrefer : new FormControl(''),
+    // userrefer : new FormControl(),
     contactname : new FormControl('')
   })
   
@@ -26,9 +26,9 @@ export class AddContactComponent {
     this.route.paramMap.subscribe(params => {
       this.userID = params.get('userid');
     });
-    this.addContact.patchValue({
-      userrefer : this.userID // You can set a default password value here if needed
-    });
+    // this.addContact.patchValue({
+    //   userrefer : this.userID // You can set a default password value here if needed
+    // });
   }
   getUserFormData() {
     console.log(this.addContact.value);
